@@ -22,17 +22,16 @@ Dalam proyek ini, saya mengimplementasikan strategi *Subnetting* untuk keamanan:
 ### 1. Provisioning Infrastruktur dengan Terraform
 <img width="940" height="267" alt="image" src="https://github.com/user-attachments/assets/09bd8663-5727-4f74-b982-8eb37bf317f5" />
 
-*[Masukkan Screenshot terminal tulisan "Apply complete!" di sini]*
 Proses pembuatan VPC, Subnet, Route Table, dan S3 dilakukan sepenuhnya otomatis menggunakan Terraform.
 
 ### 2. Validasi Jaringan via AWS CLI
 <img width="940" height="165" alt="image" src="https://github.com/user-attachments/assets/b16bb8dc-cbf4-437a-9703-392c1680fdad" />
 
-*[Masukkan Screenshot tabel AWS CLI describe-subnets di sini]*
 Verifikasi bahwa konfigurasi CIDR block (`10.0.1.0/24` dan `10.0.2.0/24`) telah terpasang dengan benar.
 
 ### 3. Hasil Deployment React.js
-*[Masukkan Screenshot browser yang membuka web React via LocalStack S3 URL]*
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/4eaef4f8-85fd-47c7-98a3-0670cbfc0293" />
+
 Aplikasi *frontend* berhasil diakses melalui S3 *bucket web endpoint*.
 
 ## 💡 Apa yang Saya Pelajari dari Proyek Ini?

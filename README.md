@@ -9,9 +9,6 @@ Proyek ini adalah simulasi pembangunan arsitektur Cloud AWS yang aman menggunaka
 * **CLI Tools:** AWS CLI
 * **Frontend:** React.js
 
-## 🏗️ Desain Arsitektur (Security by Design)
-*[Masukkan Gambar Diagram Arsitektur Draw.io di sini]*
-
 Dalam proyek ini, saya mengimplementasikan strategi *Subnetting* untuk keamanan:
 1. **Frontend Hosting (S3 Bucket):** Aplikasi React.js di- *deploy* sebagai *Static Website* di S3 untuk efisiensi biaya dan skalabilitas tinggi.
 2. **Public Subnet (Zona Akses Internet):** Dilengkapi dengan *Internet Gateway* (IGW). Disiapkan untuk penempatan Load Balancer atau Web Server di masa depan.
@@ -49,7 +46,6 @@ Aplikasi *frontend* berhasil diakses melalui S3 *bucket web endpoint*.
    docker-compose up -d
 2. Deploy infrastructure
    ```bash
-   cd terraform
    terraform init
    terraform apply -auto-approve
 

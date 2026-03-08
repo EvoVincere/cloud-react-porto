@@ -31,6 +31,8 @@ Verifikasi bahwa konfigurasi CIDR block (`10.0.1.0/24` dan `10.0.2.0/24`) telah 
 
 ### 3. Hasil Deployment React.js
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/4eaef4f8-85fd-47c7-98a3-0670cbfc0293" />
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/df10977f-1ca5-41e5-afb7-9fe4b7600645" />
+
 
 Aplikasi *frontend* berhasil diakses melalui S3 *bucket web endpoint*.
 
@@ -38,3 +40,25 @@ Aplikasi *frontend* berhasil diakses melalui S3 *bucket web endpoint*.
 * Memahami cara kerja CIDR Notation dalam membagi kapasitas IP jaringan.
 * Memahami pentingnya pemisahan *Route Table* untuk *Public* dan *Private Subnet*.
 * Menyadari efisiensi penggunaan Terraform dibandingkan melakukan konfigurasi manual (*ClickOps*) di Cloud Console.
+
+
+## 🚀 Cara Menjalankan Secara Lokal
+
+1. **Persiapan Lingkungan:**
+   ```bash
+   docker-compose up -d
+2. Deploy infrastructure
+   ```bash
+   cd terraform
+   terraform init
+   terraform apply -auto-approve
+
+4. Build & Deploy Frontend (React)
+   - Tambahkan "homepage": "." di package.json.
+
+   - Jalankan npm run build.
+
+   - Upload ke S3:
+     ```bash
+     aws --endpoint-url=http://localhost:4566 s3 sync portoLandingpage/build/ s3://cloud-react-app-bucket/ --acl public-read
+    

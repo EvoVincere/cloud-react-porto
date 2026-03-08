@@ -1,0 +1,6 @@
+# ignore terraform directory
+.terraform/
+# ignore file state terraform
+*.tfstate*
+# ignore localstack data
+.localstack/
